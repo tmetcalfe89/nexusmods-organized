@@ -1,0 +1,201 @@
+.tim-nexus-notes {
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	outline: none;
+	border: none;
+	resize: none;
+}
+
+.tims-nexus-notes-container {
+	height: 5rem;
+}
+
+#section > div > div.wrap.flex {
+	flex-basis: 0;
+	min-height: 0;
+	overflow-y: auto;
+	flex-grow: 1;
+}
+
+#section > div {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+#feature {
+	height: 150px !important;
+}
+
+#feature .stats {
+	display: none;
+}
+
+#fileinfo {
+	display: none !important;
+}
+
+.side-tags.sideitems {
+	display: none !important;
+}
+
+.modactions > * {
+	display: none;
+}
+
+#action-nmm, #action-manual, .action-custom {
+	display: initial;
+}
+
+body:has(dialog[open]) {
+	overflow-y: hidden;
+}
+
+dialog {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+    border: none;
+	padding: 0;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	flex-direction: column;
+}
+
+dialog[open] {
+	display: flex;
+}
+
+dialog > :first-child {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+dialog > :last-child {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+dialog > :not(:last-child) {
+	border-bottom: 1px solid grey;
+}
+
+dialog > * {
+	background-color: #444;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+dialog > header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+dialog > main {
+	flex-basis: 0;
+	min-height: 0;
+	flex-grow: 1;
+	overflow-y: auto;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.mod-card {
+	order: 2;
+}
+
+.mod-card.pull-up {
+	order: 1;
+}
+
+.tim-global-clickable {
+	cursor: pointer;
+}
+
+.tim-global-hidden {
+	display: none !important;
+}
+.tim-global-bottomright {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+/* The switch - the box around the slider */
+.tim-global-switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.tim-global-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.tim-global-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.tim-global-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:indeterminate + .tim-global-slider {
+	background-color: #FF00FF;
+}
+
+input:checked:not(:indeterminate) + .tim-global-slider {
+  background-color: #2196F3;
+}
+
+input:focus + .tim-global-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked:not(:indeterminate) + .tim-global-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.tim-global-slider.tim-global-round {
+  border-radius: 34px;
+}
+
+.tim-global-slider.tim-global-round:before {
+  border-radius: 50%;
+}
